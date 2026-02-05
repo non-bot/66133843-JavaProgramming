@@ -1,4 +1,3 @@
-package bai2_variables;
 public class BaiTap2 {
     // Chuyen doi nhiet do
     public static void main(String[] args) {

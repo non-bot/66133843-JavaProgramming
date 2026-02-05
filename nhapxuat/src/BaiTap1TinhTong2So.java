@@ -1,5 +1,3 @@
-package nhapxuat;
-
 import java.util.Scanner;
 
 public class BaiTap1TinhTong2So {

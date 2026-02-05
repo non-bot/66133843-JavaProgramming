@@ -1,4 +1,3 @@
-package bai2_variables;
 public class BaiTap3 {
     public static void main(String[] args) {
         // BMI = cân nặng (kg) / (chiều cao (m) * chiều cao (m))

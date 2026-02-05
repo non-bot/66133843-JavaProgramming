@@ -1,4 +1,4 @@
-package bai2_variables;
+
 public class BaiTap1 {
     public static void main(String[] args) {
         // 1. Khai báo các biến
