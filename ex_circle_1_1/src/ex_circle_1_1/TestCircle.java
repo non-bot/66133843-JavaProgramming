@@ -15,7 +15,11 @@ public class TestCircle {
       
       c2.setRadius(5.5);
       c2.setColor("green");
-		System.out.println("ban kinh cua vong 2 sau khi doi la " + c2.getRadius() + ", mau la " + c2.getColor());
-
+		System.out.println(c2.toString	());
+		Circle c4 = new Circle();
+		c4.setRadius(5.5);
+		System.out.println("radius is: " + c4.getRadius());
+		c4.setColor("green");
+		System.out.println("color is: " + c4.getColor());
 	}
 }

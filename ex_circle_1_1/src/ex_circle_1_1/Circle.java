@@ -35,7 +35,7 @@ public class Circle {
 		return color;
 	}
 
-	public String getCircle() {
+	public String toString() {
 		return "radius = " + radius + ", color = " + color;
 	}
 
