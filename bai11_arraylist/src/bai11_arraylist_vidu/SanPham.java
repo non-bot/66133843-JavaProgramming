@@ -2,7 +2,8 @@ package bai11_arraylist_vidu;
 
 public class SanPham {
 	private String maSP, tenSP;
-	private int gia, soLuong;
+	private int soLuong;
+	private double gia;
 
 	public SanPham() {
 		maSP = "";
@@ -11,7 +12,7 @@ public class SanPham {
 		soLuong = 0;
 	}
 
-	public SanPham(String maSP, String tenSP, int gia, int soLuong) {
+	public SanPham(String maSP, String tenSP, double gia, int soLuong) {
 		this.maSP = maSP;
 		this.tenSP = tenSP;
 		this.gia = gia;
@@ -26,7 +27,7 @@ public class SanPham {
 		return tenSP;
 	}
 
-	public int getGia() {
+	public double getGia() {
 		return gia;
 	}
 
@@ -44,9 +45,9 @@ public class SanPham {
 			this.tenSP = tenSP;
 	}
 
-	public void setGia(int gia) {
-		if (gia > 0)
-			this.gia = gia;
+	public void setGia(double d) {
+		if (d > 0)
+			this.gia = d;
 	}
 
 	public void setSoLuong(int soLuong) {
@@ -54,7 +55,7 @@ public class SanPham {
 			this.soLuong = soLuong;
 	}
 
-	public void setSanPham(String maSP, String tenSP, int gia, int soLuong) {
+	public void setSanPham(String maSP, String tenSP, double gia, int soLuong) {
 		if (maSP != null && !maSP.isEmpty())
 			this.maSP = maSP;
 		if (maSP != null && !maSP.isEmpty())
@@ -70,6 +71,6 @@ public class SanPham {
 	}
 
 	public String hienThiThongTin() {
-		return String.format("MaSP: %s, ten SP: %s\n Gia: %d, so luong: %d", maSP, tenSP, gia, soLuong);
+		return String.format("\nMaSP: %s, ten SP: %s\nGia: %f, so luong: %d\n", maSP, tenSP, gia, soLuong);
 	}
 }
