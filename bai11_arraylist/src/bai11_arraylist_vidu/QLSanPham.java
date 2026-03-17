@@ -35,7 +35,7 @@ public class QLSanPham {
 	
 	public static void timSP(ArrayList<SanPham> a, Scanner sc) {
 		boolean f = false;
-		System.out.print("Nhap ten SP muon tim:");
+		System.out.print("\nNhap ten SP muon tim:");
 		String s = new String(sc.nextLine().toLowerCase());
 		for (SanPham c : a) {
 			if(c.getTenSP().toLowerCase().contains(s)) 
@@ -92,10 +92,23 @@ public class QLSanPham {
 		for (i = 0; i < a.size()-1; i+=2) {
 			tong += a.get(i).tinhThanhTien() + a.get(i+1).tinhThanhTien();
 		}
-		if (i+2 < a.size()) {
-			tong += a.get(i+2).tinhThanhTien();
+		if (i < a.size()) {
+			tong += a.get(i).tinhThanhTien();
 		}
 		return tong;
+	}
+	public static void timSPSHH(ArrayList<SanPham> a) {
+		boolean check = false;
+		System.out.println("\nSan pham sap het hang:");
+		for (SanPham c : a) {
+			if (c.getSoLuong()  < 10) {
+				c.hienThiThongTin();
+				check = true;
+			}
+		}
+		if(check == false) {
+			System.out.println("Khong co SP sap het hang");
+		}
 	}
 	public static void main(String args[]) {
 		int n;
@@ -112,11 +125,20 @@ public class QLSanPham {
 			themSP(c, sc);
 			a.add(c);
 		}
+		System.out.println("Danh sach san pham:");
 		inMang(a);
-		System.out.print("Nhap ma SP muon xoa: ");
+		System.out.print("\nNhap ma SP muon xoa: ");
 		s = sc.nextLine();
 		xoaSP(a, s);
 		timSP(a, sc);
-		System.out.println("Tong gia tri hang hoa: " + tongGTHH(a));
+		System.out.println("\nTong gia tri hang hoa: " + tongGTHH(a));		
+		sapXepTang(a);
+		System.out.println("\nHang hoa sap xep theo gia tang dan:");
+		inMang(a);
+		sapXepGiam(a);
+		System.out.println("\nHang hoa sap xep theo gia tang dan:");
+		inMang(a);
+		timSPSHH(a);
+		a.clear();
 	}
 }
