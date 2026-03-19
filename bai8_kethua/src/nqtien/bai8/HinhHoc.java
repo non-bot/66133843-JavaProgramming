@@ -2,12 +2,12 @@ package nqtien.bai8;
 
 public class HinhHoc {
 	private String ten, mauSac;
-	public float tinhDienTich(float dai, float rong) {
-		return dai*rong;
+	public float tinhDienTich() {
+		return 0;
 	}
 	
-	public float tinhChuVi(float dai, float rong) {
-		return (dai+rong)/2;
+	public float tinhChuVi() {
+		return 0;
 	}
 	
 	public String hienThiThongTin() {

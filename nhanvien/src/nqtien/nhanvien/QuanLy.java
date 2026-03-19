@@ -1,7 +1,6 @@
 package nqtien.nhanvien;
 
 //Lớp con: Quản lý
-//File: QuanLy.java
 public class QuanLy extends NhanVien {
  private double phuCapChucVu;
  private double heSoKinhNghiem;
