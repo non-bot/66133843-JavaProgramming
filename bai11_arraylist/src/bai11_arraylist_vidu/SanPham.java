@@ -71,6 +71,6 @@ public class SanPham {
 	}
 
 	public String hienThiThongTin() {
-		return String.format("\nMaSP: %s, ten SP: %s, gia: %f, so luong: %d\n", maSP, tenSP, gia, soLuong);
+		return String.format("MaSP: %s, ten SP: %s, gia: %f, so luong: %d\n", maSP, tenSP, gia, soLuong);
 	}
 }
