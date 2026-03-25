@@ -20,6 +20,6 @@ public class HinhHoc {
 	}
 	
 	public String hienThiThongTin() {
-		return String.format("%s[mau: %s]", ten, mauSac);
+		return String.format("%s [mau: %s]", ten, mauSac);
 	}
 }
