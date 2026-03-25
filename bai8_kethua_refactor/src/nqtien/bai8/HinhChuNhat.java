@@ -25,22 +25,24 @@ public class HinhChuNhat extends HinhHoc {
 		chieuRong = 0;
 	}
 
-	public HinhChuNhat(float chieuDai, float chieuRong) {
-		super();
+	public HinhChuNhat(String ten, String mauSac, float chieuDai, float chieuRong) {
+		super(ten, mauSac);
 		this.chieuDai = chieuDai;
 		this.chieuRong = chieuRong;
 	}
 
 	@Override
-	public float tinhDienTich(float dai, float rong) {
+	public double tinhDienTich() {
 		// TODO Auto-generated method stub
-		return dai*rong;
+		return chieuDai*chieuRong;
 	}
 
 	@Override
-	public float tinhChuVi(float dai, float rong) {
+	public double tinhChuVi() {
 		// TODO Auto-generated method stub
-		return (dai+rong)*2;
+		return (chieuDai+chieuRong)*2;
 	}
-	
+	public String hienThiThongTin() {
+		return super.hienThiThongTin() + String.format(", [chieu dai: %.2f], [chieu rong: %.2f] ", chieuDai, chieuRong);
+	}
 }

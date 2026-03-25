@@ -18,12 +18,13 @@ public class QuanLy extends NhanVien {
  }
  
  @Override
- public void hienThiThongTin() {
-     super.hienThiThongTin();
-     System.out.println("Phụ cấp chức vụ: " + phuCapChucVu);
-     System.out.println("Hệ số kinh nghiệm: " + heSoKinhNghiem);
-     System.out.println("Tổng lương: " + this.tinhLuong());
-     System.out.println("Chức vụ: Quản lý");
+ public String toString() {
+     super.toString();
+     String s = "Phụ cấp chức vụ: " + phuCapChucVu;
+     s = "Hệ số kinh nghiệm: " + heSoKinhNghiem;
+     s = ("Tổng lương: " + this.tinhLuong());
+     s = "Chức vụ: Quản lý";
+     return s;
  }
  
  // Phương thức riêng của quản lý

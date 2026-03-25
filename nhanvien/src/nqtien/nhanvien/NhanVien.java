@@ -10,15 +10,13 @@ public class NhanVien {
         this.hoTen = hoTen;
         this.luongCoBan = luongCoBan;
     }
-    
-    // Phương thức tính lương - sẽ được ghi đè ở lớp con
     public double tinhLuong() {
         return luongCoBan;
     }
-    
-    public void hienThiThongTin() {
-        System.out.println("Mã NV: " + maNV);
-        System.out.println("Họ tên: " + hoTen);
-        System.out.println("Lương cơ bản: " + luongCoBan);
+    @Override
+    public String toString() {
+    	 return "Mã NV: " + maNV +
+    	           ", Họ tên: " + hoTen +
+    	           ", Lương cơ bản: " + luongCoBan;
     }
 }

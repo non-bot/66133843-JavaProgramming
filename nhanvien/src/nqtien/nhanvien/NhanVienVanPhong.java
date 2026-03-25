@@ -19,11 +19,12 @@ public class NhanVienVanPhong extends NhanVien {
  }
  
  @Override
- public void hienThiThongTin() {
-     super.hienThiThongTin();
-     System.out.println("Số giờ làm thêm: " + soGioLamThem);
-     System.out.println("Lương làm thêm/giờ: " + luongThemMoiGio);
-     System.out.println("Tổng lương: " + this.tinhLuong());
-     System.out.println("Chức vụ: Nhân viên văn phòng");
+ public String toString() {
+     super.toString();
+     String s = ("Số giờ làm thêm: " + soGioLamThem);
+     s = ("Lương làm thêm/giờ: " + luongThemMoiGio);
+     s = ("Tổng lương: " + this.tinhLuong());
+     s = ("Chức vụ: Nhân viên văn phòng");
+     return s;
  }
 }

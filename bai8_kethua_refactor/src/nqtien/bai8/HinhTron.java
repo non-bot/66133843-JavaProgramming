@@ -3,27 +3,27 @@ package nqtien.bai8;
 public class HinhTron extends HinhHoc {
 	private float r;
 
-	public HinhTron(float r) {
-		super();
+	public HinhTron(String ten, String mauSac, float r) {
+		super(ten, mauSac);
 		this.r = r;
 	}
 
 	@Override
-	public float tinhDienTich(float dai, float rong) {
+	public double tinhDienTich() {
 		// TODO Auto-generated method stub
-		return super.tinhDienTich(dai, rong);
+		return r*r*(Math.PI);
 	}
 
 	@Override
-	public float tinhChuVi(float dai, float rong) {
+	public double tinhChuVi() {
 		// TODO Auto-generated method stub
-		return super.tinhChuVi(dai, rong);
+		return 2*Math.PI*r;
 	}
 
 	@Override
 	public String hienThiThongTin() {
 		// TODO Auto-generated method stub
-		return super.hienThiThongTin();
+		return super.hienThiThongTin() + String.format(", [ban kinh: %.2f]", r);
 	}
 	
 }
