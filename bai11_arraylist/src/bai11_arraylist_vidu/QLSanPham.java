@@ -125,7 +125,7 @@ public class QLSanPham {
 			themSP(c, sc);
 			a.add(c);
 		}
-		System.out.println("Danh sach san pham:");
+		System.out.println("Danh Bao san pham:");
 		inMang(a);
 		System.out.print("\nNhap ma SP muon xoa: ");
 		s = sc.nextLine();

@@ -35,7 +35,7 @@ public class Run {
 			System.out.println(dsHocSinh.get(i).toString());
 		}
 		//them hoc sinh
-		System.out.println("Danh sach sau khi them");
+		System.out.println("Danh Bao sau khi them");
 		
 		dsHocSinh.add(new HocSinh("Tran Trong Z", (short)10, "4/1"));
 		n++;
@@ -51,7 +51,7 @@ public class Run {
 				break;
 			}
 		}
-		System.out.println("Danh sach sau khi xoa");
+		System.out.println("Danh Bao sau khi xoa");
 
 		for (int i=0; i < n; i++) {
 			System.out.println(dsHocSinh.get(i).toString());

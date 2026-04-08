@@ -7,76 +7,76 @@
 //        System.out.println("=== ARRAYLIST CƠ BẢN - MINH HỌA CÁC PHƯƠNG THỨC ===\n");
 //        
 //        // 1. Khai báo ArrayList với Generics
-//        List<String> danhSachTen = new ArrayList<>();
+//        List<String> danhBaoTen = new ArrayList<>();
 //        
 //        // 2. Thêm phần tử - add()
 //        System.out.println("--- THÊM PHẦN TỬ ---");
-//        danhSachTen.add("Nguyễn Văn A");
-//        danhSachTen.add("Trần Thị B");
-//        danhSachTen.add("Lê Văn C");
+//        danhBaoTen.add("Nguyễn Văn A");
+//        danhBaoTen.add("Trần Thị B");
+//        danhBaoTen.add("Lê Văn C");
 //        
 //        // Thêm tại vị trí cụ thể - add(index, element)
-//        danhSachTen.add(1, "Phạm Thị D"); // Chèn vào vị trí 1
+//        danhBaoTen.add(1, "Phạm Thị D"); // Chèn vào vị trí 1
 //        
-//        System.out.println("Danh sách sau khi thêm: " + danhSachTen);
+//        System.out.println("Danh sách sau khi thêm: " + danhBaoTen);
 //        
 //        // 3. Lấy kích thước - size()
 //        System.out.println("\n--- KÍCH THƯỚC ---");
-//        System.out.println("Số phần tử: " + danhSachTen.size());
+//        System.out.println("Số phần tử: " + danhBaoTen.size());
 //        
 //        // 4. Truy cập phần tử - get()
 //        System.out.println("\n--- TRUY CẬP PHẦN TỬ ---");
-//        System.out.println("Phần tử thứ 0: " + danhSachTen.get(0));
-//        System.out.println("Phần tử thứ 2: " + danhSachTen.get(2));
+//        System.out.println("Phần tử thứ 0: " + danhBaoTen.get(0));
+//        System.out.println("Phần tử thứ 2: " + danhBaoTen.get(2));
 //        
 //        // 5. Cập nhật phần tử - set()
 //        System.out.println("\n--- CẬP NHẬT PHẦN TỬ ---");
-//        System.out.println("Trước khi cập nhật: " + danhSachTen.get(1));
-//        danhSachTen.set(1, "Trần Thị B (Đã đổi tên)");
-//        System.out.println("Sau khi cập nhật: " + danhSachTen.get(1));
+//        System.out.println("Trước khi cập nhật: " + danhBaoTen.get(1));
+//        danhBaoTen.set(1, "Trần Thị B (Đã đổi tên)");
+//        System.out.println("Sau khi cập nhật: " + danhBaoTen.get(1));
 //        
 //        // 6. Tìm kiếm - contains(), indexOf()
 //        System.out.println("\n--- TÌM KIẾM ---");
-//        System.out.println("Có 'Lê Văn C' không? " + danhSachTen.contains("Lê Văn C"));
-//        System.out.println("Vị trí của 'Lê Văn C': " + danhSachTen.indexOf("Lê Văn C"));
-//        System.out.println("Vị trí của 'Không tồn tại': " + danhSachTen.indexOf("Không tồn tại"));
+//        System.out.println("Có 'Lê Văn C' không? " + danhBaoTen.contains("Lê Văn C"));
+//        System.out.println("Vị trí của 'Lê Văn C': " + danhBaoTen.indexOf("Lê Văn C"));
+//        System.out.println("Vị trí của 'Không tồn tại': " + danhBaoTen.indexOf("Không tồn tại"));
 //        
 //        // 7. Xóa phần tử - remove()
 //        System.out.println("\n--- XÓA PHẦN TỬ ---");
-//        System.out.println("Trước khi xóa: " + danhSachTen);
+//        System.out.println("Trước khi xóa: " + danhBaoTen);
 //        
 //        // Xóa theo chỉ số
-//        String removedByIndex = danhSachTen.remove(0);
+//        String removedByIndex = danhBaoTen.remove(0);
 //        System.out.println("Đã xóa (theo index 0): " + removedByIndex);
 //        
 //        // Xóa theo đối tượng
-//        boolean removedByObject = danhSachTen.remove("Lê Văn C");
+//        boolean removedByObject = danhBaoTen.remove("Lê Văn C");
 //        System.out.println("Xóa 'Lê Văn C' thành công? " + removedByObject);
 //        
-//        System.out.println("Sau khi xóa: " + danhSachTen);
+//        System.out.println("Sau khi xóa: " + danhBaoTen);
 //        
 //        // 8. Kiểm tra rỗng - isEmpty()
 //        System.out.println("\n--- KIỂM TRA RỖNG ---");
-//        System.out.println("Danh sách có rỗng không? " + danhSachTen.isEmpty());
+//        System.out.println("Danh sách có rỗng không? " + danhBaoTen.isEmpty());
 //        
 //        // 9. Duyệt danh sách
 //        System.out.println("\n--- DUYỆT DANH SÁCH ---");
 //        System.out.println("Cách 1: For thông thường");
-//        for (int i = 0; i < danhSachTen.size(); i++) {
-//            System.out.println("Vị trí " + i + ": " + danhSachTen.get(i));
+//        for (int i = 0; i < danhBaoTen.size(); i++) {
+//            System.out.println("Vị trí " + i + ": " + danhBaoTen.get(i));
 //        }
 //        
 //        System.out.println("\nCách 2: For-each");
-//        for (String ten : danhSachTen) {
+//        for (String ten : danhBaoTen) {
 //            System.out.println("Tên: " + ten);
 //        }
 //        
 //        System.out.println("\nCách 3: ForEach với Lambda (Java 8+)");
-//        danhSachTen.forEach(ten -> System.out.println("Tên: " + ten));
+//        danhBaoTen.forEach(ten -> System.out.println("Tên: " + ten));
 //        
 //        // 10. Chuyển đổi sang mảng - toArray()
 //        System.out.println("\n--- CHUYỂN ĐỔI SANG MẢNG ---");
-//        String[] mangTen = danhSachTen.toArray(new String[0]);
+//        String[] mangTen = danhBaoTen.toArray(new String[0]);
 //        System.out.println("Mảng chuyển đổi:");
 //        for (String ten : mangTen) {
 //            System.out.println(ten);
@@ -84,8 +84,8 @@
 //        
 //        // 11. Xóa toàn bộ - clear()
 //        System.out.println("\n--- XÓA TOÀN BỘ ---");
-//        danhSachTen.clear();
-//        System.out.println("Sau khi clear, kích thước: " + danhSachTen.size());
-//        System.out.println("Danh sách có rỗng không? " + danhSachTen.isEmpty());
+//        danhBaoTen.clear();
+//        System.out.println("Sau khi clear, kích thước: " + danhBaoTen.size());
+//        System.out.println("Danh sách có rỗng không? " + danhBaoTen.isEmpty());
 //    }
 //}
