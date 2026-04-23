@@ -5,6 +5,7 @@ import java.util.Scanner;
 //Tao lop scanner roi dung lop do cho nguoi dung nhap thong tin vao
 // roi lay can nang chia binh phuong chieu cao roi in ra chi so BMI va tinh trang co the
 //Tao mang sinh vien roi them tung phan tu vao roi in ra man hinh
+//Tao bien them sv kiem tra mssv nhap vao co trung voi mssv da co hay khong va kiem tra nam sinh la so
 public class Main {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
@@ -15,7 +16,7 @@ public class Main {
 		double canNang = sc.nextDouble();
 		sc.nextLine();
 		double bMI = canNang/(chieuCao*chieuCao);
-		System.out.println("Chi so BMI cua ban: " + bMI);
+		System.out.printf("Chi so BMI cua ban: %.2f\n", bMI);
 		System.out.println("Thong tin tinh trang co the:");
 		if(bMI < 18.5) System.out.println("Gay");
 		else if(bMI < 24.9) System.out.println("Binh thuong");
@@ -27,27 +28,46 @@ public class Main {
 		sV.add(new SinhVien(66123654, "Nguyen Van B", 2006, "Nha Trang"));
 		sV.add(new SinhVien(66654321, "Nguyen Van C", 2006, "Nha Trang"));
 		int n = 3;
-		
-		
-	}
-	public void themSV(ArrayList<SinhVien> sV, Scanner sc, int n) {
-		int a, c;
-		String b, d;
+		SinhVien themSV;
+		int mSSV, namSinh = 2006;
+		String tenSV, noiSong;
 		boolean check;
 		do{
 			System.out.println("Nhap mssv");
-			a = sc.nextInt();
+			mSSV = sc.nextInt();
+			sc.nextLine();
+			check = true;
 			for (int i = 0; i < n; i++) {
-				if (a == sV.get(i).getmSSV()) {
+				if (mSSV == sV.get(i).getmSSV()) {
 					check = false;
 					break;
-				}
-				else {
-					check = true;
-				}
+				}				
 			}
-			
+			if (!check) {
+		        System.out.println("MSSV da ton tai, nhap lai!");
+		    }
 		}while (check == false);
-		
+		System.out.println("Nhap ten sinh vien");
+		tenSV = sc.nextLine();
+		do {
+			System.out.println("Nhap nam sinh");
+			String c = sc.nextLine();
+			try {
+		        namSinh = Integer.parseInt(c);
+		        check = true;
+		    } catch (NumberFormatException e) {
+		        check = false;
+		        System.out.println("Nhap mot so");
+		    }
+		}while (!check);
+		System.out.println("Nhap noi song");
+		noiSong = sc.nextLine();
+		themSV = new SinhVien(mSSV, tenSV, namSinh, noiSong);
+		sV.add(themSV);
+		n++;
+		for (int i = 0; i < n; i++) {
+			System.out.println(sV.get(i).toString());
+		}
 	}
+	
 }
