@@ -1,5 +1,6 @@
 package thigk2.NgoQuangTien66133843;
 
+import java.time.Year;
 import java.util.ArrayList;
 import java.util.Scanner;
 //Tao lop scanner roi dung lop do cho nguoi dung nhap thong tin vao
@@ -8,6 +9,7 @@ import java.util.Scanner;
 //Tao bien them sv kiem tra mssv nhap vao co trung voi mssv da co hay khong va kiem tra nam sinh la so
 public class Main {
 	public static void main(String[] args) {
+//		thong tin bmi
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Nhap chieu cao cua ban (m)");
 		double chieuCao = sc.nextDouble();
@@ -22,12 +24,17 @@ public class Main {
 		else if(bMI < 24.9) System.out.println("Binh thuong");
 		else if(bMI < 29.4) System.out.println("Thua can");
 		else System.out.println("Beo phi");
-		
+//		hard code danh sach sinh vien
 		ArrayList<SinhVien> sV = new ArrayList<SinhVien>();
 		sV.add(new SinhVien(66123456,"Nguyen Van A", 2006, "Nha Trang"));
 		sV.add(new SinhVien(66123654, "Nguyen Van B", 2006, "Nha Trang"));
 		sV.add(new SinhVien(66654321, "Nguyen Van C", 2006, "Nha Trang"));
 		int n = 3;
+//		in ra man hinh
+		for (int i = 0; i < n; i++) {
+			System.out.println(sV.get(i).toString());
+		}
+//		them moi 1 sinh vien
 		SinhVien themSV;
 		int mSSV, namSinh = 2006;
 		String tenSV, noiSong;
@@ -65,9 +72,97 @@ public class Main {
 		themSV = new SinhVien(mSSV, tenSV, namSinh, noiSong);
 		sV.add(themSV);
 		n++;
+//		in ra man hinh danh sach moi
 		for (int i = 0; i < n; i++) {
 			System.out.println(sV.get(i).toString());
 		}
+//		in ra man hinh cac sinh vien lon hon 20 tuoi
+		ArrayList<SinhVien> sVB = new ArrayList<SinhVien>();
+		int currentYear = Year.now().getValue();
+		for (int i = 0; i < n; i++) {
+			int a = currentYear - sV.get(i).getNamSinh();
+			if (a > 20)
+				sVB.add(sV.get(i));
+		}
+		check = false;
+		for (SinhVien e : sVB) {
+			System.out.println(e.toString());
+			check = true;
+		}
+		if (!check) {
+			System.out.println("Khong co sinh vien nao tren 20 tuoi");
+		}
+		
+Untitled<Integer> readFile(String filename) {
+	        ArrayList<Integer> list = new ArrayList<>();
+
+	        try (BufferedReader br = new BufferedReader(new FileReader(filename))) {
+	            String line;
+
+	            while ((line = br.readLine()) != null) {
+	                try {
+	                    int num = Integer.parseInt(line.trim());
+	                    list.add(num);
+	                } catch (NumberFormatException e) {
+	                    System.out.println("Bo qua dong khong hop le: " + line);
+	                }
+	            }
+
+	        } catch (IOException e) {
+	            System.out.println("Khong mo duoc file!");
+	        }
+
+	        return list;
+	    }
+
+	    // In danh sách 
+	    public static void printList(ArrayList<Integer> list) {
+	        System.out.println("Danh sach so:");
+	        for (int x : list) {
+	            System.out.print(x + " ");
+	        }
+	        System.out.println();
+	    }
+
+	    //Kiểm tra tồn tại
+	    public static boolean containsX(ArrayList<Integer> list, int x) {
+	        return list.contains(x);
+	    }
+
+	    public static void main(String[] args) {
+	        Scanner sc = new Scanner(System.in);
+
+	        // Đọc file
+	        ArrayList<Integer> list = readFile("input.txt");
+
+	        if (list.isEmpty()) {
+	            System.out.println("Danh sach rong!");
+	            return;
+	        }
+
+	        // In danh sách
+	        printList(list);
+
+	        // Nhập x an toàn
+	        int x;
+	        while (true) {
+	            System.out.print("Nhap x: ");
+	            String s = sc.nextLine();
+	            try {
+	                x = Integer.parseInt(s);
+	                break;
+	            } catch (NumberFormatException e) {
+	                System.out.println("Nhap so!");
+	            }
+	        }
+
+	        // Kiểm tra
+	        if (containsX(list, x)) {
+	            System.out.println("x co trong danh sach");
+	        } else {
+	            System.out.println("x KHONG co trong danh sach");
+	        }
+	    }
 	}
 	
 }
