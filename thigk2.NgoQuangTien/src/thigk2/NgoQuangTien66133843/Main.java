@@ -96,7 +96,7 @@ public class Main {
 		}
 //		doc file van ban
 		ArrayList<Integer> list = new ArrayList<>();
-		BufferedReader br = new BufferedReader(new FileReader("input.txt"));
+		BufferedReader br = new BufferedReader(new FileReader("Untitled.txt"));
 		
 	}
 	
