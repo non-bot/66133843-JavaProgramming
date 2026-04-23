@@ -11,5 +11,8 @@ public class Main {
 		System.out.println("Nhap can nang cua ban");
 		double canNang = sc.nextDouble();
 		sc.nextLine();
+		double bMI = canNang/(chieuCao*chieuCao);
+		System.out.println("Chi so BMI cua ban: " + bMI);
+		
 	}
 }
