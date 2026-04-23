@@ -1,5 +1,7 @@
 package thigk2.NgoQuangTien66133843;
 
+import java.io.BufferedReader;
+import java.io.FileReader;
 import java.time.Year;
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -92,77 +94,10 @@ public class Main {
 		if (!check) {
 			System.out.println("Khong co sinh vien nao tren 20 tuoi");
 		}
+//		doc file van ban
+		ArrayList<Integer> list = new ArrayList<>();
+		BufferedReader br = new BufferedReader(new FileReader("input.txt"));
 		
-Untitled<Integer> readFile(String filename) {
-	        ArrayList<Integer> list = new ArrayList<>();
-
-	        try (BufferedReader br = new BufferedReader(new FileReader(filename))) {
-	            String line;
-
-	            while ((line = br.readLine()) != null) {
-	                try {
-	                    int num = Integer.parseInt(line.trim());
-	                    list.add(num);
-	                } catch (NumberFormatException e) {
-	                    System.out.println("Bo qua dong khong hop le: " + line);
-	                }
-	            }
-
-	        } catch (IOException e) {
-	            System.out.println("Khong mo duoc file!");
-	        }
-
-	        return list;
-	    }
-
-	    // In danh sách 
-	    public static void printList(ArrayList<Integer> list) {
-	        System.out.println("Danh sach so:");
-	        for (int x : list) {
-	            System.out.print(x + " ");
-	        }
-	        System.out.println();
-	    }
-
-	    //Kiểm tra tồn tại
-	    public static boolean containsX(ArrayList<Integer> list, int x) {
-	        return list.contains(x);
-	    }
-
-	    public static void main(String[] args) {
-	        Scanner sc = new Scanner(System.in);
-
-	        // Đọc file
-	        ArrayList<Integer> list = readFile("input.txt");
-
-	        if (list.isEmpty()) {
-	            System.out.println("Danh sach rong!");
-	            return;
-	        }
-
-	        // In danh sách
-	        printList(list);
-
-	        // Nhập x an toàn
-	        int x;
-	        while (true) {
-	            System.out.print("Nhap x: ");
-	            String s = sc.nextLine();
-	            try {
-	                x = Integer.parseInt(s);
-	                break;
-	            } catch (NumberFormatException e) {
-	                System.out.println("Nhap so!");
-	            }
-	        }
-
-	        // Kiểm tra
-	        if (containsX(list, x)) {
-	            System.out.println("x co trong danh sach");
-	        } else {
-	            System.out.println("x KHONG co trong danh sach");
-	        }
-	    }
 	}
 	
 }
