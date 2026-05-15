@@ -15,6 +15,7 @@ public class SampleController implements Initializable{
 	@FXML
 	private TextField bigtext;
 	Boolean check = false;
+	Boolean checkequal = false;
 	double ans;
 	double num1;
 	double num2;
@@ -50,6 +51,7 @@ public class SampleController implements Initializable{
 		smalltext.setText("");
 		ans = num1;
 		num1 = 0;
+		checkequal = true;
 	}
 	public void Answer(ActionEvent an) {
 		bigtext.setText(bigtext.getText()+ans);
@@ -67,7 +69,12 @@ public class SampleController implements Initializable{
 	@FXML
 	public void Number(ActionEvent num) {
 		String no = ((Button)num.getSource()).getText();
-		bigtext.setText(bigtext.getText() + no);
+		if(checkequal) {
+			bigtext.setText(no);
+			checkequal = false;
+		}
+		else
+			bigtext.setText(bigtext.getText() + no);
 	}
 	public static Double tryParseDouble(String s) {
 	    try {
