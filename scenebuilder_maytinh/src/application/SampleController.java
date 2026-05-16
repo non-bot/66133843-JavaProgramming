@@ -54,7 +54,11 @@ public class SampleController implements Initializable{
 		checkequal = true;
 	}
 	public void Answer(ActionEvent an) {
-		bigtext.setText(bigtext.getText()+ans);
+		if(checkequal == true) {
+			bigtext.setText(ans+"");
+		}
+		else
+			bigtext.setText(bigtext.getText()+ans);
 	}
 	public void Opcheck() {
 		if (check == true) {
