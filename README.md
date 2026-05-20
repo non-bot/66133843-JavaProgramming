@@ -19,11 +19,11 @@ Project gồm 1 file main `Main.java`, 1 file Sample `Sample.fxml`, 1 file Contr
 Logic bên trong **Main.java**, lấy dữ liệu từ các đối tượng từ file fxml rồi thực hiện tính toán lần lượt, có thể nhớ kết quả gần nhất đã tính.
 
 <p align="center">
-  <img src="images/maytinh/Picture1.png" alt="ViDu1" width="200"/>
+  <img src="image/maytinh/Picture1.png" alt="ViDu1" width="200"/>
     
-  <img src="images/maytinh/Picture2.png" alt="ViDu3" width="200"/>
+  <img src="image/maytinh/Picture2.png" alt="ViDu3" width="200"/>
     
-  <img src="images/maytinh/Picture3.png" alt="ViDu4" width="200"/>
+  <img src="image/maytinh/Picture3.png" alt="ViDu4" width="200"/>
 </p>
 
 ---
