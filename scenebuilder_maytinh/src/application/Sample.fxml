@@ -9,20 +9,20 @@
 
 <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="472.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SampleController">
    <children>
-      <TextField fx:id="smalltext">
+      <TextField fx:id="smalltext" editable="false">
          <VBox.margin>
-            <Insets left="20.0" right="20.0" top="20.0" />
+            <Insets left="20.0" right="20.0" top="30.0" />
          </VBox.margin>
          <font>
             <Font size="15.0" />
          </font>
       </TextField>
-      <TextField fx:id="bigtext" prefHeight="60.0" prefWidth="0.0">
+      <TextField fx:id="bigtext" editable="false" prefHeight="60.0" prefWidth="0.0">
          <opaqueInsets>
             <Insets />
          </opaqueInsets>
          <VBox.margin>
-            <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+            <Insets bottom="40.0" left="20.0" right="20.0" top="10.0" />
          </VBox.margin>
          <font>
             <Font size="20.0" />
@@ -80,6 +80,9 @@
                </font>
             </Button>
          </children>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
       </HBox>
       <HBox alignment="CENTER" prefHeight="18.0" prefWidth="400.0">
          <children>
